@@ -1,9 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server'
-import { Connection, PublicKey } from '@solana/web3.js'
-import { getAccount } from '@solana/spl-token'
-
-// Подключение к Solana Devnet
-const connection = new Connection('https://api.devnet.solana.com', 'confirmed')
+import { tokenAccountDB } from '@/lib/db'
 
 export async function POST(request: NextRequest) {
   try {
@@ -17,14 +13,21 @@ export async function POST(request: NextRequest) {
       )
     }
 
-    // Получаем информацию об аккаунте токена
-    const accountInfo = await getAccount(connection, new PublicKey(tokenAccount))
+    // Получаем информацию об аккаунте токена через симуляцию
+    const accountInfo = await tokenAccountDB.getBalance(tokenAccount)
     
+    if (!accountInfo) {
+      return NextResponse.json(
+        { error: 'Token account not found' },
+        { status: 404 }
+      )
+    }
+
     return NextResponse.json({
       balance: accountInfo.amount.toString(),
-      mint: accountInfo.mint.toString(),
-      owner: accountInfo.owner.toString(),
-      decimals: accountInfo.mint.toString()
+      mint: accountInfo.mint,
+      owner: accountInfo.owner,
+      decimals: accountInfo.decimals
     })
   } catch (error) {
     console.error('Balance fetch error:', error)

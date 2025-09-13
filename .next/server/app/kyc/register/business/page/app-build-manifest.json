@@ -1,18 +1,18 @@
 {
   "pages": {
     "/kyc/register/business/page": [
-      "static/chunks/d96012bcfc98706a.js",
-      "static/chunks/2532f69a4166d704.js",
-      "static/chunks/6517989edddc54ba.css",
-      "static/chunks/3edf0f4ca15df186.js",
-      "static/chunks/77229176155a5e07.js",
-      "static/chunks/d863c9d6244a19c5.js",
-      "static/chunks/6583b318a631be97.js",
-      "static/chunks/cb66963b6becf75b.js",
-      "static/chunks/1ec42a645891fb56.js",
-      "static/chunks/4649283e7a8b6491.js",
-      "static/chunks/bbf89c5280eb1f0c.js",
-      "static/chunks/turbopack-be65fe6159dc0df6.js"
+      "static/chunks/ff1a16fafef87110.js",
+      "static/chunks/6a7993b07cb97bb3.js",
+      "static/chunks/da6b86554e7ad38a.css",
+      "static/chunks/bc463d78978726b5.js",
+      "static/chunks/a94015f0e56a6da8.js",
+      "static/chunks/9c31d7e839665eaa.js",
+      "static/chunks/fbaa99551699ceac.js",
+      "static/chunks/64efe8bc97ebb595.js",
+      "static/chunks/6ec1b18a4264a945.js",
+      "static/chunks/d04efc723d1783d5.js",
+      "static/chunks/ad485e1ef0aa584e.js",
+      "static/chunks/turbopack-c6ca44ba1034a243.js"
     ]
   }
 }

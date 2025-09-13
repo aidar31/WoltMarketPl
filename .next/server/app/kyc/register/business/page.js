@@ -1,5 +1,5 @@
 var R=require("../../../../chunks/ssr/[turbopack]_runtime.js")("server/app/kyc/register/business/page.js")
-R.c("server/chunks/ssr/[root-of-the-server]__b6ef0cfc._.js")
+R.c("server/chunks/ssr/[root-of-the-server]__3a2f428e._.js")
 R.c("server/chunks/ssr/node_modules_next_dist_d0b0ee8f._.js")
 R.c("server/chunks/ssr/node_modules_a6977744._.js")
 R.c("server/chunks/ssr/node_modules_next_dist_d50383c3._.js")
@@ -12,6 +12,6 @@ R.c("server/chunks/ssr/node_modules_next_dist_client_components_builtin_global-e
 R.c("server/chunks/ssr/[root-of-the-server]__9d68a906._.js")
 R.c("server/chunks/ssr/_f57231f2._.js")
 R.c("server/chunks/ssr/_864a30df._.js")
-R.m(671446)
-R.m(688193)
-module.exports=R.m(688193).exports
+R.m(71446)
+R.m(88193)
+module.exports=R.m(88193).exports

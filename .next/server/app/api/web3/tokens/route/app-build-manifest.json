@@ -1,0 +1,11 @@
+{
+  "pages": {
+    "/api/web3/tokens/route": [
+      "static/chunks/64efe8bc97ebb595.js",
+      "static/chunks/6ec1b18a4264a945.js",
+      "static/chunks/d04efc723d1783d5.js",
+      "static/chunks/ad485e1ef0aa584e.js",
+      "static/chunks/turbopack-c6ca44ba1034a243.js"
+    ]
+  }
+}

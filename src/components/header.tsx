@@ -31,6 +31,9 @@ export function Header() {
           <a href="#demo" className="text-muted-foreground hover:text-foreground transition-colors">
             Демо
           </a>
+          <Link href="/web3-demo" className="text-muted-foreground hover:text-foreground transition-colors">
+            Web3 Демо
+          </Link>
         </nav>
 
         <div className="flex items-center space-x-4">
@@ -71,6 +74,9 @@ export function Header() {
             <a href="#demo" className="block text-muted-foreground hover:text-foreground transition-colors">
               Демо
             </a>
+            <Link href="/web3-demo" className="block text-muted-foreground hover:text-foreground transition-colors">
+              Web3 Демо
+            </Link>
             <div className="pt-4 space-y-2">
               <Link href="/login" className="block">
                 <Button variant="ghost" className="w-full justify-start">

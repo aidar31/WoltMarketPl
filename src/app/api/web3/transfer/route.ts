@@ -1,9 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server'
-import { Connection, Keypair, PublicKey, Transaction } from '@solana/web3.js'
-import { createTransferInstruction, getAccount } from '@solana/spl-token'
-
-// Подключение к Solana Devnet
-const connection = new Connection('https://api.devnet.solana.com', 'confirmed')
+import { transactionDB, tokenAccountDB } from '@/lib/db'
 
 export async function POST(request: NextRequest) {
   try {
@@ -17,29 +13,44 @@ export async function POST(request: NextRequest) {
       )
     }
 
-    // Создаем транзакцию
-    const transaction = new Transaction()
+    // Проверяем, что отправитель имеет достаточно токенов
+    const fromAccount = await tokenAccountDB.getBalance(fromTokenAccount)
+    if (!fromAccount) {
+      return NextResponse.json(
+        { error: 'Source token account not found' },
+        { status: 404 }
+      )
+    }
 
-    // Создаем инструкцию перевода
-    const transferInstruction = createTransferInstruction(
-      new PublicKey(fromTokenAccount), // source
-      new PublicKey(toTokenAccount), // destination
-      new PublicKey(fromTokenAccount), // owner (в реальном проекте используйте правильный owner)
-      amount // amount
-    )
+    if (fromAccount.amount < Number(amount)) {
+      return NextResponse.json(
+        { error: 'Insufficient balance' },
+        { status: 400 }
+      )
+    }
 
-    transaction.add(transferInstruction)
+    // Проверяем, что получатель существует
+    const toAccount = await tokenAccountDB.getBalance(toTokenAccount)
+    if (!toAccount) {
+      return NextResponse.json(
+        { error: 'Destination token account not found' },
+        { status: 404 }
+      )
+    }
 
-    // Подписываем и отправляем транзакцию
-    const signature = await connection.sendTransaction(transaction, [])
-    
-    // Ждем подтверждения
-    await connection.confirmTransaction(signature)
+    // Создаем транзакцию через симуляцию
+    const transaction = await transactionDB.createTransaction({
+      fromTokenAccount,
+      toTokenAccount,
+      amount: Number(amount),
+      mint,
+    })
 
     return NextResponse.json({
       message: 'Transfer successful',
-      signature,
-      amount
+      signature: transaction.signature,
+      amount: transaction.amount,
+      transactionId: transaction.id
     })
   } catch (error) {
     console.error('Transfer error:', error)

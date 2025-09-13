@@ -101,6 +101,15 @@ type RouteHandlerConfig<Route extends AppRouteHandlerRoutes = AppRouteHandlerRou
   type __Unused = __Check
 }
 
+// Validate ../../src/app/web3-demo/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/web3-demo">> = Specific
+  const handler = {} as typeof import("../../src/app/web3-demo/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
 // Validate ../../src/app/api/auth/login/route.ts
 {
   type __IsExpected<Specific extends RouteHandlerConfig<"/api/auth/login">> = Specific
@@ -150,6 +159,24 @@ type RouteHandlerConfig<Route extends AppRouteHandlerRoutes = AppRouteHandlerRou
 {
   type __IsExpected<Specific extends RouteHandlerConfig<"/api/web3/get-balance">> = Specific
   const handler = {} as typeof import("../../src/app/api/web3/get-balance/route.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../src/app/api/web3/tokens/route.ts
+{
+  type __IsExpected<Specific extends RouteHandlerConfig<"/api/web3/tokens">> = Specific
+  const handler = {} as typeof import("../../src/app/api/web3/tokens/route.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../src/app/api/web3/transactions/route.ts
+{
+  type __IsExpected<Specific extends RouteHandlerConfig<"/api/web3/transactions">> = Specific
+  const handler = {} as typeof import("../../src/app/api/web3/transactions/route.js")
   type __Check = __IsExpected<typeof handler>
   // @ts-ignore
   type __Unused = __Check
