@@ -1,0 +1,3 @@
+{
+  "/api/web3/get-balance/route": "app/api/web3/get-balance/route.js"
+}

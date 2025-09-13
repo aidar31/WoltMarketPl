@@ -1,0 +1,11 @@
+{
+  "pages": {
+    "/api/kyc/register/business/route": [
+      "static/chunks/cb66963b6becf75b.js",
+      "static/chunks/1ec42a645891fb56.js",
+      "static/chunks/4649283e7a8b6491.js",
+      "static/chunks/bbf89c5280eb1f0c.js",
+      "static/chunks/turbopack-be65fe6159dc0df6.js"
+    ]
+  }
+}

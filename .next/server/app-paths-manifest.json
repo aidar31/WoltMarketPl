@@ -1,0 +1,17 @@
+{
+  "/_not-found/page": "app/_not-found/page.js",
+  "/api/auth/login/route": "app/api/auth/login/route.js",
+  "/api/auth/register/route": "app/api/auth/register/route.js",
+  "/api/kyc/register/business/route": "app/api/kyc/register/business/route.js",
+  "/api/kyc/register/investor/route": "app/api/kyc/register/investor/route.js",
+  "/api/web3/create-token/route": "app/api/web3/create-token/route.js",
+  "/api/web3/get-balance/route": "app/api/web3/get-balance/route.js",
+  "/api/web3/transfer/route": "app/api/web3/transfer/route.js",
+  "/demo/page": "app/demo/page.js",
+  "/favicon.ico/route": "app/favicon.ico/route.js",
+  "/kyc/page": "app/kyc/page.js",
+  "/kyc/register/business/page": "app/kyc/register/business/page.js",
+  "/kyc/register/investor/page": "app/kyc/register/investor/page.js",
+  "/login/page": "app/login/page.js",
+  "/page": "app/page.js"
+}

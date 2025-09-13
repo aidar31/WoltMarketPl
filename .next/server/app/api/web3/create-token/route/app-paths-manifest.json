@@ -1,0 +1,3 @@
+{
+  "/api/web3/create-token/route": "app/api/web3/create-token/route.js"
+}

@@ -1,0 +1,17 @@
+{
+  "/_not-found/page": "/_not-found",
+  "/api/auth/login/route": "/api/auth/login",
+  "/api/auth/register/route": "/api/auth/register",
+  "/api/kyc/register/business/route": "/api/kyc/register/business",
+  "/api/kyc/register/investor/route": "/api/kyc/register/investor",
+  "/api/web3/create-token/route": "/api/web3/create-token",
+  "/api/web3/get-balance/route": "/api/web3/get-balance",
+  "/api/web3/transfer/route": "/api/web3/transfer",
+  "/demo/page": "/demo",
+  "/favicon.ico/route": "/favicon.ico",
+  "/kyc/page": "/kyc",
+  "/kyc/register/business/page": "/kyc/register/business",
+  "/kyc/register/investor/page": "/kyc/register/investor",
+  "/login/page": "/login",
+  "/page": "/"
+}
